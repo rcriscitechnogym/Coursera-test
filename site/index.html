@@ -7,17 +7,101 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Hello Coursera</title>
+        <title>Hello Coursera </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <!--Per ora style lo inserisco nell'head, nelle real web page non va qua--> 
+        <style>
+           
+        h1 {
+            color:red;
+            font-size: 30px;
+            width: 800px;
+        }
+        section {
+            color:seagreen;
+            text-align: left;
+        }
+
+        .red {color:red}
+
+        #start {color: royalblue;}
+
+        /*combinare elements,class e ID selectors*/
+        p.coralsize {color:coral; font-size: 22px;}
+        
+        /* element1 > element2 {} significa applica stile se ho element 2 direttamente annidato con element1; se uso solo spazio e non >, si applica anche se ci sono altri tag tra i due, basta che element2 sia annidato */
+        /*si possono fare combo non solo su elementi, ma sutto */
+
+        /*pseudo class: ne esistono un po' (link, visited, hover, active,..) */
+
+        a:hover,a:active {
+            color:crimson; display: block; font-size:23px;
+        }
+
+        /*questo successivo, colora background dei li dentro ol di numero dispari (odd)*/
+        ol li:nth-child(odd){
+            background-color: gray;
+            width: 200px;
+        }
+
+        </style>
     </head>
     <body>
-        First web page linked to GitHub
+        <h1><b>First web page linked to GitHub</b></h1>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <p><div>Ho cose da dire</div> <div>ma non so interagire</div> 
+        <span>Questi vanno in linea</span><span> come si può vedere</span>
+        </p>
+        <section id="start">
+            <article1>Per la prima sezione</article1>
+            
+        </section>
+        <section1 id="sec1">
+            <div>Lista di oggetti:</div>
+            <ul>
+                <li>Cappello</li>
+                <li>Chitarra</li>
+                <li>Occhiali
+                    <ul>
+                        <li>Da vista</li>
+                        <li>Da sole</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </section1>
+        <section2>
+            <div>Lista ordinata invece:</div>
+            <ol>
+                <li>Prendi occhiali</li>
+                <li>Appoggiali sul comodino</li>
+                <li>Chiudi le luci</li>
+            </ol>
+            <p class="coralsize">Esempio di linea testo con classe associata creata nello style</p>
+        </section2>
         
+        <!--Caratteri da evitare affinche editor li legga correttamente: <, >, & 
+            Al loro posto usa &lt; &gt; e &amp;
+            Inoltre ci sono abbreviazioni per fare simboli invece che cercarli, tipo copyright : &copy;
+            &nbsp; tra parole si usa per non separarle quando cambia dimensione pagina-->
+
+        <!--External link-->
+        <p>Clicca <a href="https://www.coursera.org/programs/google-cloud-cob0a?currentTab=CATALOG" target="_blank" title="Test">qui</a> per accedere a Coursera home page
+        </p>
+
+        <!--Same page link-->
+        <p><a href="#start">Torna a section</a></p>
+        <p><a href="#sec1">Torna a section 1</a></p>
+
+            
+
+
+        <footer>Conclusione pagina</footer>
+
         <script src="" async defer></script>
     </body>
 </html>
