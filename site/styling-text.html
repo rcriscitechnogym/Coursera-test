@@ -5,13 +5,69 @@
 <title>Styling Text</title>
 <style>
 .style {
+    font-family: 'Times New Roman', Times, serif;
+    color:hotpink;
+    font-style: normal !important; /*important si usa per bypassare specifity quando ho diversi stili per stesso tag*/
+    font-weight: bold;
+    font-size: 120%; /*prendo il 120% della size di default del browser*/
+    text-transform: uppercase;
     
+}
 
+#box {
+    background-color: indianred;
+    padding: 10px;
+    border: 5px solid black;
+    width: 900px; /*così imposti la larghezza del contenuto e non dell'intera box; questo 900 esclude 10px di padding e 5 di border!*/
+}
+
+#content {
+    background-color: plum;
+    }
+
+/*si possono settare diverse cose anche per background: colore, immagine, repeat, position ecc.. vedi documentazione */
+
+#bg {
+    width: 300px;
+    height: 300px;
+    background: blue;
+   
+}
+
+#bg2 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    background: yellow right ;
+    float: left
+    }
+
+section {
+    clear:both; /*fa in modo che testo non si sovrapponga a causa del float di bg2*/
 }
 </style>
 </head>
 <body>
 <p>You can get commonly used font combinations from <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">http://www.w3schools.com/cssref/css_websafe_fonts.asp</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod necessitatibus a ullam dolorum amet reprehenderit sit laudantium reiciendis aperiam. </p>
 <p class="style">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam fugiat repudiandae fugit porro commodi.</p>
+<div style="font-size: 2em;" id="box">
+<div id="content">
+    Raddoppio font size rispetto a quanto dichiarato nel .style (120%)
+</div>
+</div>
+<div style="font-size: .5em;">Dimezzo font size rispetto a quanto dichiarato nel .style(120%)</div>
+
+<div id="bg">Test su background
+    <div id="bg2"></div>
+</div>
+
+<div>
+<p id="bg2"></p>
+<section>Regular text after the bg2</section>
+
+</div>
+
 </body>
 </html>
